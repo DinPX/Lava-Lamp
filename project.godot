@@ -19,7 +19,7 @@ boot_splash/fullsize=false
 [display]
 
 window/size/width=120
-window/size/height=300
+window/size/height=318
 window/size/resizable=false
 window/size/borderless=true
 window/size/always_on_top=true
@@ -32,7 +32,7 @@ window/ios/hide_home_indicator=false
 window/ios/hide_status_bar=false
 window/ios/suppress_ui_gesture=false
 window/stretch/mode="2d"
-window/stretch/aspect="keep"
+window/stretch/aspect="expand"
 
 [gui]
 
