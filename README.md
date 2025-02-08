@@ -21,7 +21,10 @@ Simple lava lamp to spice up your desktop
 ## Features
 - Make your lava lamp Godzilla sized (or average human size)
 - Shader `TIME` and general rendering stops when minimized (see [VisualServer](https://docs.godotengine.org/en/3.6/classes/class_visualserver.html))
+- `Tween` to juice up visuals
+- Outline for visual feedback when being hovered or is active
 - Best for the skibidi Linux experience (lightweight, amogos certified)
+- Runs on infinite frames (source: my portal of truth, just trust me human)
 
 # Credits
 - I used [Dan3008's 2d lava lamp shader](https://godotshaders.com/shader/2d-lava-lamp/) and converted it for Godot 3 use. It's under the [CC0 license](https://creativecommons.org/public-domain/cc0/).
