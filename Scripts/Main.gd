@@ -1,9 +1,9 @@
 extends Control
 
-var scale := 1
+var scale := 0
 var dragging = false
 
-onready var lamp_size := Vector2(120, 318) / 2
+onready var lamp_size := Vector2(160, 300) / 2
 
 
 func _input(event: InputEvent) -> void:
@@ -22,6 +22,17 @@ func _notification(what: int) -> void:
 		VisualServer.render_loop_enabled = true
 
 
+func _on_OnTop_pressed() -> void:
+	OS.set_window_always_on_top(!OS.is_window_always_on_top())
+
+	if OS.is_window_always_on_top():
+		$"%OnTop".hint_tooltip = """Always on top
+of other windows: ON"""
+	else:
+		$"%OnTop".hint_tooltip = """Always on top
+of other windows: OFF"""
+
+
 func _on_Minimize_pressed() -> void:
 	OS.set_window_minimized(true)
 	VisualServer.set_shader_time_scale(0.0)
@@ -30,16 +41,13 @@ func _on_Minimize_pressed() -> void:
 
 func _on_Scale_pressed() -> void:
 	scale += 1
-	match scale:
-		1:
-			OS.set_window_size(Vector2(120, 318))
-			lamp_size = Vector2(120, 318) / 2
-		2:
-			OS.set_window_size(Vector2(160, 358))
-			lamp_size = Vector2(120, 318) / 2
+
+	match scale: # Note: Different from lamp_size for its y-offset
+		0: OS.set_window_size(Vector2(160, 320))
+		1: OS.set_window_size(Vector2(200, 360))
+		2: OS.set_window_size(Vector2(320, 640))
 		3:
-			OS.set_window_size(Vector2(240, 636))
-			lamp_size = Vector2(120, 318) / 2
+			OS.set_window_size(Vector2(160, 320))
 			scale = 0
 
 

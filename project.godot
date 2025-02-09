@@ -13,13 +13,16 @@ config_version=4
 config/name="Lava Lamp"
 config/description="Simple lava lamp to spice up your desktop"
 run/main_scene="res://Scenes/Lamp.tscn"
-boot_splash/show_image=false
-boot_splash/fullsize=false
+boot_splash/image="res://Assets/Textures/splash.png"
+boot_splash/use_filter=false
+boot_splash/bg_color=Color( 0, 0, 0, 0 )
+config/icon="res://icon.png"
+config/windows_native_icon="res://icon.ico"
 
 [display]
 
-window/size/width=120
-window/size/height=318
+window/size/width=160
+window/size/height=320
 window/size/resizable=false
 window/size/borderless=true
 window/size/always_on_top=true
