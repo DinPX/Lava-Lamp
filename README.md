@@ -1,5 +1,5 @@
-# Lava Lamp
-Simple lava lamp to spice up your desktop
+<p align="center"><img src="./Github/banner.png" alt="Lava lamp icon and title"></p>
+<p align="center">Simple lava lamp to spice up your desktop</p>
 
 ## Features
 - Multiple instances don't affect each other. Spawn as much lamps as you like!
