@@ -39,9 +39,9 @@ Simple lava lamp to spice up your desktop
 - `_notification(what)` - notifies some changes to the program. `what` defines the kind of activity.
 ```gdscript
 func _notification(what: int) -> void:
-	if what == MainLoop.NOTIFICATION_WM_FOCUS_IN:
-		VisualServer.set_shader_time_scale(1.0)
-		VisualServer.render_loop_enabled = true
+    if what == MainLoop.NOTIFICATION_WM_FOCUS_IN:
+        VisualServer.set_shader_time_scale(1.0)
+        VisualServer.render_loop_enabled = true
 ```
 Let's say the user minimized the app. Once they try to maximize it again either by `Alt + Tab` command or other means, it notifies that it just gained its focus. In this example right after the notification, it just tells the `VisualServer` to continue the time scale of shaders, as well as continue all the visible renders.
 
